@@ -3,7 +3,6 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import About from "./About";
 import ProjectList from "./ProjectList";
-import user from "../data/user";
 
 function App() {
 
@@ -14,7 +13,7 @@ function App() {
       linkedin: "https://www.linkedin.com/in/liza/",
     }
   };
-
+  
   const projects = [
     {
       id: 1,
@@ -34,17 +33,17 @@ function App() {
       about: "Etsy for aliens",
       technologies: ["Vue", "CSS", "Javascript"],
     }
+    // Add more projects here
   ];
 
-  
   return (
-        <div>
-        <NavBar links={["home", "about", "projects"]} />
-        <Home />
-        <About {...aboutData} /> {/* Pass the aboutData object as props */}
-        <ProjectList projects={projects} />
-      </div>
-    );
+    <div>
+      <NavBar links={["home", "about", "projects"]} />
+      <Home />
+      <About {...aboutData} /> {/* Pass the aboutData object as props */}
+      <ProjectList projects={projects} />
+    </div>
+  );
 }
 
 export default App;
